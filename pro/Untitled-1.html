@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+    <head>
+            <frameset rows="25%,*">
+            <frameset cols="30%,30%,*">
+                <frameset 
+                
+            </frameset>
+        
+        </frameset>
+<script language="javascript">
+function validate()
+{
+	u=f1.t1.value;
+	p=f1.t2.value;
+	uexp=/^[a-zA-Z]+$/;
+	pexp=/^[a-zA-Z0-9]{6,}$/;
+	if(u=="")
+	{
+	    alert("Enter username");
+	    return false;
+	}
+	else if(uexp.test(u)==false)
+	{
+	    alert("username should contains only characters");
+	    return false;
+	}
+	if(p=="")
+	{
+	    alert("Enter password");
+	    return false;
+	}
+	else if(pexp.test(p)==false)
+	{
+	    alert("Enter valid password");
+	    return false;
+	}
+	else
+	{
+	    alert("validation successful")
+	}
+}
+	</script>
+</head>
+    <body>
+	<form name="f1" action="" method="post" onsubmit="return validate()">
+		<fieldset>
+			<legend>LOGIN FORM</legend>
+			<table>
+				<tr><td>Name:<input type="text" name="t1"></td></tr>
+				<tr><td>Password:<input type="password" name="t2"></td></tr>
+				<tr><td><input type="submit" name="b1" value="SUBMIT"></td>
+				<td><button type="reset">RESET</button></td></tr>
+			</table>
+		</fieldset>
+	</form>
+    </body>
+</html>

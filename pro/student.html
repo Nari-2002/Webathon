@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Page</title>
+  <style>
+    /* Add your styles for the form and other elements here */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background-image: url("opp.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center center;
+    }
+
+    .student-container {
+  background-color: rgba(255, 255, 255, 0.2); /* Transparent white background */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 400px;
+  text-align: center;
+  color: black; /* Set text color to black */
+}
+
+.student-container h2 {
+  margin-bottom: 20px;
+}
+
+    .form-group {
+      margin-bottom: 15px;
+      text-align: left;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+      color: #555;
+    }
+
+    .form-group input {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group input:focus {
+      outline: none;
+      border-color: #428bca;
+    }
+
+    .form-group select {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .form-group textarea {
+      width: calc(100% - 20px);
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      resize: vertical;
+    }
+
+    .button-container {
+      text-align: center;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      background-color: #428bca;
+      border: none;
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #357ebd;
+    }
+  </style>
+  <script>
+    const fileContent = localStorage.getItem('fileContent');
+console.log('this year records are:', fileContent);
+  </script>
+</head>
+
+<body>
+  <div class="student-container">
+    <h2>Student Profile and Offer Letter Upload</h2>
+    <form>
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+      </div>
+      <div class="form-group">
+        <label for="rollno">Roll No:</label>
+        <input type="text" id="rollno" name="rollno" required>
+      </div>
+      <div class="form-group">
+        <label for="placement-company">Placement Company:</label>
+        <input type="text" id="placement-company" name="placement-company" required>
+      </div>
+      <div class="form-group">
+        <label for="package">Package:</label>
+        <input type="text" id="package" name="package" required>
+      </div>
+      <div class="form-group">
+        <label for="offer-letter">Offer Letter (PDF):</label>
+        <input type="file" id="offer-letter" name="offer-letter" accept=".pdf" required>
+      </div>
+      <div class="button-container">
+        <button type="submit" class="submit-button">Upload</button>
+      </div>
+    </form>
+  </div>
+
+  <!-- Add your JavaScript for form submission here -->
+
+</body>
+
+</html>
